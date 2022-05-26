@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="69.642857142857139"/>
+            <point key="canvasLocation" x="636" y="60"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Z4-cQ-4L0">
@@ -136,6 +136,9 @@
                                         <rect key="frame" x="138" y="318.5" width="78.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Site"/>
+                                        <connections>
+                                            <segue destination="fa2-7R-onv" kind="show" id="pkb-cT-ozP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,10 +167,11 @@
                         <viewLayoutGuide key="safeArea" id="aF6-Sr-cSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cYv-Nk-k6N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB4-Kg-g1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="53"/>
+            <point key="canvasLocation" x="2116" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5M-Lr-BJg">
