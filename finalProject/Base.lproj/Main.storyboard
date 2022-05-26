@@ -234,8 +234,19 @@
                     <view key="view" contentMode="scaleToFill" id="nq9-Xf-OPd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-FT-bhi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5FK-VE-N9C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hb8-FT-bhi" firstAttribute="leading" secondItem="5FK-VE-N9C" secondAttribute="leading" id="UFi-ta-6Oq"/>
+                            <constraint firstItem="5FK-VE-N9C" firstAttribute="trailing" secondItem="hb8-FT-bhi" secondAttribute="trailing" id="arV-AH-p7d"/>
+                            <constraint firstAttribute="bottom" secondItem="hb8-FT-bhi" secondAttribute="bottom" id="lEs-Qx-Wqb"/>
+                            <constraint firstItem="hb8-FT-bhi" firstAttribute="top" secondItem="nq9-Xf-OPd" secondAttribute="top" id="slb-Ja-V6q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="55W-IT-uTV"/>
                 </viewController>
