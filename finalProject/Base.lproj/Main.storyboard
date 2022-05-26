@@ -315,6 +315,7 @@
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="siteLabel" destination="m9O-8a-h4E" id="b1a-rv-cC5"/>
+                                    <segue destination="fa2-7R-onv" kind="show" id="vE9-jW-6mi"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wt4-Dl-p2Q">
@@ -346,6 +347,9 @@
             <point key="canvasLocation" x="19" y="850"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vE9-jW-6mi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
