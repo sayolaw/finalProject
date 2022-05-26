@@ -52,6 +52,7 @@ class SiteCollectionViewController: UICollectionViewController {
         if let siteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? SiteCollectionViewCell{
             
             siteCell.configure(with: dataSource[indexPath.row])
+            
             cell = siteCell
             
         }
@@ -61,7 +62,22 @@ class SiteCollectionViewController: UICollectionViewController {
         return cell
 
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPaths = collectionView.indexPathsForSelectedItems{
+                let destinationController = segue.destination as! SiteDetailViewController
+                print(dataSource[indexPaths[0].row]);
+                destinationController.site = dataSource[indexPaths[0].row]
+//                collectionView.deselectItem(at: indexPaths[0], animated: true)
+            }
+        }
+    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            performSegue(withIdentifier: "showDetail", sender: nil)
+//        }
+    @IBAction func unwindToMain(segue: UIStoryboardSegue){
+           
+       }
     // MARK: UICollectionViewDelegate
 
     /*

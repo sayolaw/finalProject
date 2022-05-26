@@ -15,6 +15,7 @@
 		0DF51DAD283F1FC200477FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF51DAB283F1FC200477FE7 /* LaunchScreen.storyboard */; };
 		0DF51DB928403A2D00477FE7 /* SiteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */; };
 		0DF51DBB28403AC400477FE7 /* SiteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */; };
+		0DF51DBD2840447B00477FE7 /* SiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0DF51DAE283F1FC200477FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCollectionViewController.swift; sourceTree = "<group>"; };
 		0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0DF51DAE283F1FC200477FE7 /* Info.plist */,
 				0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */,
 				0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */,
+				0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				0DF51DB928403A2D00477FE7 /* SiteCollectionViewController.swift in Sources */,
 				0DF51DBB28403AC400477FE7 /* SiteCollectionViewCell.swift in Sources */,
 				0DF51DA1283F1FC100477FE7 /* AppDelegate.swift in Sources */,
+				0DF51DBD2840447B00477FE7 /* SiteDetailViewController.swift in Sources */,
 				0DF51DA3283F1FC100477FE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

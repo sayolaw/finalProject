@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="1384" y="74"/>
         </scene>
-        <!--View Controller-->
+        <!--Site Detail View Controller-->
         <scene sceneID="lEl-WC-BkT">
             <objects>
-                <viewController id="fa2-7R-onv" sceneMemberID="viewController">
+                <viewController id="fa2-7R-onv" customClass="SiteDetailViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTh-Yk-aKy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,6 +226,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cYv-Nk-k6N"/>
+                    <connections>
+                        <outlet property="siteTitle" destination="OSD-Rp-ZbT" id="Pe7-hX-g4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB4-Kg-g1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -315,7 +318,7 @@
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="siteLabel" destination="m9O-8a-h4E" id="b1a-rv-cC5"/>
-                                    <segue destination="fa2-7R-onv" kind="show" id="vE9-jW-6mi"/>
+                                    <segue destination="fa2-7R-onv" kind="show" identifier="showDetail" id="vE9-jW-6mi"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wt4-Dl-p2Q">
