@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-Ah-4ot">
-                                <rect key="frame" x="30" y="313.5" width="354" height="269.5"/>
+                                <rect key="frame" x="30" y="273.5" width="354" height="349.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create/Add a new site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-zo-GWi">
                                         <rect key="frame" x="94" y="0.0" width="166.5" height="20.5"/>
@@ -132,6 +132,11 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bet-rW-syZ">
+                                        <rect key="frame" x="138" y="318.5" width="78.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add Site"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
