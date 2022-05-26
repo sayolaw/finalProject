@@ -29,6 +29,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create/Add a site"/>
+                                        <connections>
+                                            <segue destination="xLg-LT-aKU" kind="show" id="6Tz-6a-fdQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-df-oUl">
                                         <rect key="frame" x="182" y="0.0" width="172" height="31"/>
@@ -54,6 +57,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="69.642857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2Z4-cQ-4L0">
+            <objects>
+                <viewController id="xLg-LT-aKU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nW2-FV-VSI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WVg-Cl-CCG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gep-rW-4ZT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtR-jb-nNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5M-Lr-BJg">
