@@ -37,6 +37,9 @@
                                         <rect key="frame" x="182" y="0.0" width="172" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="View Sites"/>
+                                        <connections>
+                                            <segue destination="Y6a-8b-e0p" kind="show" id="mdQ-Qb-rc6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -282,6 +285,7 @@
                         <viewLayoutGuide key="safeArea" id="lbN-Aa-pjo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fiE-72-5zd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nao-ix-NpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
