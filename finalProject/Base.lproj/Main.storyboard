@@ -201,6 +201,9 @@
                                 <rect key="frame" x="0.0" y="584.5" width="414" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View Location"/>
+                                <connections>
+                                    <segue destination="Ev1-mp-ucK" kind="show" id="Elz-g2-Bnl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aF6-Sr-cSj"/>
@@ -223,6 +226,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB4-Kg-g1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2116" y="70"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ILS-lF-OQg">
+            <objects>
+                <viewController id="Ev1-mp-ucK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nq9-Xf-OPd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5FK-VE-N9C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="55W-IT-uTV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTm-yE-838" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888" y="53"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5M-Lr-BJg">
