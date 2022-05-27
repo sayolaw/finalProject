@@ -13,7 +13,7 @@ class SiteCollectionViewController: UICollectionViewController {
     private var dataSource : [Site] = [ Site(image: "Bodrum.jpg", name: "Ankara",latitude: 23.3367,longitude: 50.6577),
                                         Site(image: "Antalya.jpg", name: "Antalya",latitude: 39.3367,longitude: 70.6577),
                                         Site(image: "Aydin.jpg", name: "Aydin",latitude: 42.3367,longitude: -64.6577),
-                                        Site(image: "Bodrum.jpg", name: "Bodrum",latitude: 39.3367,longitude: 70.6577),
+                                        Site(image: "Bodrum.jpg", name: "Bodrum",latitude: 43.64,longitude: -79.38),
                                         Site(image: "Canakkale.jpg", name: "Canakkale",latitude: 42.3367,longitude: 66.6577),
                                        ]
 //    private var dataSource = ["Nigeria","Ghana","Cameroon","Spain"]
