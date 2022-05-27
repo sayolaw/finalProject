@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="700" y="74"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Site View Controller-->
         <scene sceneID="2Z4-cQ-4L0">
             <objects>
-                <viewController id="xLg-LT-aKU" sceneMemberID="viewController">
+                <viewController id="xLg-LT-aKU" customClass="CreateSiteViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nW2-FV-VSI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Site"/>
                                         <connections>
-                                            <segue destination="fa2-7R-onv" kind="show" id="pkb-cT-ozP"/>
+                                            <segue destination="fa2-7R-onv" kind="show" identifier="createSite" id="pkb-cT-ozP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -156,6 +156,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gep-rW-4ZT"/>
+                    <connections>
+                        <outlet property="latitudeInput" destination="PxC-6a-TV5" id="jEg-6x-WsQ"/>
+                        <outlet property="longitudeInpute" destination="FUh-Rk-zpG" id="sEO-2t-p3h"/>
+                        <outlet property="titleInput" destination="Sfs-ty-G4z" id="Nyj-Hj-MLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtR-jb-nNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
