@@ -10,7 +10,13 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class SiteCollectionViewController: UICollectionViewController {
-    private var dataSource = ["Nigeria","Ghana","Cameroon","Spain"]
+    private var dataSource : [Site] = [ Site(image: "Bodrum.jpg", name: "Ankara",latitude: 23.3367,longitude: 50.6577),
+                                        Site(image: "Antalya.jpg", name: "Antalya",latitude: 39.3367,longitude: 70.6577),
+                                        Site(image: "Aydin.jpg", name: "Aydin",latitude: 42.3367,longitude: -64.6577),
+                                        Site(image: "Bodrum.jpg", name: "Bodrum",latitude: 39.3367,longitude: 70.6577),
+                                        Site(image: "Canakkale.jpg", name: "Canakkale",latitude: 42.3367,longitude: 66.6577),
+                                       ]
+//    private var dataSource = ["Nigeria","Ghana","Cameroon","Spain"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,7 +57,7 @@ class SiteCollectionViewController: UICollectionViewController {
         
         if let siteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? SiteCollectionViewCell{
             
-            siteCell.configure(with: dataSource[indexPath.row])
+            siteCell.configure(with: dataSource[indexPath.row].title)
             
             cell = siteCell
             

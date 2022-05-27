@@ -9,14 +9,25 @@ import UIKit
 
 class SiteDetailViewController: UIViewController {
     @IBOutlet weak var siteTitle: UILabel!
-    var site = String()
+    @IBOutlet weak var firstImage: UIImageView!
+    var site : Site?
     override func viewDidLoad() {
         super.viewDidLoad()
-        siteTitle.text = site
+        siteTitle.text = site?.title
+        firstImage.image = UIImage(named: site?.image ?? "")
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
 
+                let destinationController = segue.destination as! MapViewController
+           
+                destinationController.site = site
+//                collectionView.deselectItem(at: indexPaths[0], animated: true)
+            }
+        
+    }
     /*
     // MARK: - Navigation
 

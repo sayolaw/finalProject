@@ -206,7 +206,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View Location"/>
                                 <connections>
-                                    <segue destination="Ev1-mp-ucK" kind="show" id="Elz-g2-Bnl"/>
+                                    <segue destination="Ev1-mp-ucK" kind="show" identifier="showMap" id="Elz-g2-Bnl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -227,6 +227,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cYv-Nk-k6N"/>
                     <connections>
+                        <outlet property="firstImage" destination="xWT-Oa-jw5" id="i8Y-60-82d"/>
                         <outlet property="siteTitle" destination="OSD-Rp-ZbT" id="Pe7-hX-g4C"/>
                     </connections>
                 </viewController>
@@ -234,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="2116" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ILS-lF-OQg">
             <objects>
-                <viewController id="Ev1-mp-ucK" sceneMemberID="viewController">
+                <viewController id="Ev1-mp-ucK" customClass="MapViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nq9-Xf-OPd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

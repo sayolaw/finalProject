@@ -16,6 +16,8 @@
 		0DF51DB928403A2D00477FE7 /* SiteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */; };
 		0DF51DBB28403AC400477FE7 /* SiteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */; };
 		0DF51DBD2840447B00477FE7 /* SiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */; };
+		0DF51DBF28404B0D00477FE7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DBE28404B0D00477FE7 /* Cell.swift */; };
+		0DF51DC12840580E00477FE7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DC02840580E00477FE7 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCollectionViewController.swift; sourceTree = "<group>"; };
 		0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetailViewController.swift; sourceTree = "<group>"; };
+		0DF51DBE28404B0D00477FE7 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		0DF51DC02840580E00477FE7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				0DF51DB828403A2D00477FE7 /* SiteCollectionViewController.swift */,
 				0DF51DBA28403AC400477FE7 /* SiteCollectionViewCell.swift */,
 				0DF51DBC2840447B00477FE7 /* SiteDetailViewController.swift */,
+				0DF51DBE28404B0D00477FE7 /* Cell.swift */,
+				0DF51DC02840580E00477FE7 /* MapViewController.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -149,10 +155,12 @@
 			files = (
 				0DF51DA5283F1FC100477FE7 /* ViewController.swift in Sources */,
 				0DF51DB928403A2D00477FE7 /* SiteCollectionViewController.swift in Sources */,
+				0DF51DBF28404B0D00477FE7 /* Cell.swift in Sources */,
 				0DF51DBB28403AC400477FE7 /* SiteCollectionViewCell.swift in Sources */,
 				0DF51DA1283F1FC100477FE7 /* AppDelegate.swift in Sources */,
 				0DF51DBD2840447B00477FE7 /* SiteDetailViewController.swift in Sources */,
 				0DF51DA3283F1FC100477FE7 /* SceneDelegate.swift in Sources */,
+				0DF51DC12840580E00477FE7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
