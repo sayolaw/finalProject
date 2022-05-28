@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-Ah-4ot">
-                                <rect key="frame" x="30" y="233.5" width="354" height="429.5"/>
+                                <rect key="frame" x="30" y="193.5" width="354" height="509.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create/Add a new site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-zo-GWi">
                                         <rect key="frame" x="94" y="0.0" width="166.5" height="20.5"/>
@@ -154,17 +154,31 @@
                                             <segue destination="VxA-X4-c6l" kind="show" identifier="showCollection" id="dGF-tw-WiQ"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-N0-pR8">
+                                        <rect key="frame" x="93.5" y="478.5" width="167.5" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-Se-rsC">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
+                                                <connections>
+                                                    <action selector="picture:" destination="xLg-LT-aKU" eventType="touchUpInside" id="GBN-cd-eQV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-Yw-rpO">
+                                                <rect key="frame" x="58.5" y="0.0" width="50.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-20-pfd">
+                                                <rect key="frame" x="117" y="0.0" width="50.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-Yw-rpO">
-                                <rect key="frame" x="161" y="730" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system" title="Button"/>
-                                <connections>
-                                    <action selector="picture:" destination="xLg-LT-aKU" eventType="touchUpInside" id="Pbn-CM-zb4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WVg-Cl-CCG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -252,7 +266,9 @@
                     <navigationItem key="navigationItem" id="cYv-Nk-k6N"/>
                     <connections>
                         <outlet property="firstImage" destination="xWT-Oa-jw5" id="i8Y-60-82d"/>
+                        <outlet property="secondImage" destination="YKa-je-sat" id="UwO-Sm-IF9"/>
                         <outlet property="siteTitle" destination="OSD-Rp-ZbT" id="Pe7-hX-g4C"/>
+                        <outlet property="thirdImage" destination="DJd-K0-xIe" id="XbE-vp-GT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB4-Kg-g1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
