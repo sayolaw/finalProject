@@ -156,6 +156,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-Yw-rpO">
+                                <rect key="frame" x="161" y="730" width="94" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system" title="Button"/>
+                                <connections>
+                                    <action selector="picture:" destination="xLg-LT-aKU" eventType="touchUpInside" id="Pbn-CM-zb4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WVg-Cl-CCG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -373,6 +382,7 @@
         <segue reference="dGF-tw-WiQ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -110,7 +110,7 @@ class SiteCollectionViewController: UICollectionViewController {
         
         if let siteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? SiteCollectionViewCell{
             
-            siteCell.configure(with: sites[indexPath.row].title!)
+            siteCell.configure(with: sites[indexPath.row].title ?? "")
             
             cell = siteCell
             

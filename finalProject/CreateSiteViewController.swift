@@ -8,11 +8,21 @@
 import UIKit
 import CoreData
 
-class CreateSiteViewController: UIViewController {
+class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
    
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var latitudeInput: UITextField!
     @IBOutlet weak var longitudeInpute: UITextField!
+    var firstImage = UIImage(named:"Aydin")
+    
+
+    @IBAction func picture(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
+    }
     
     
     @IBAction func saveNewSite(_ sender: Any) {
@@ -20,11 +30,15 @@ class CreateSiteViewController: UIViewController {
         let titleInput = titleInput.text ?? "No title"
         let latitudeInput = Double(latitudeInput.text ?? "0.0") ?? 0.0
         let longitudeInput = Double(longitudeInpute.text ?? "0.0") ?? 0.0
-        appendSite(title: titleInput, latitude: latitudeInput, longitude: longitudeInput)
+        appendSite(title: titleInput, latitude: latitudeInput, longitude: longitudeInput,image: saveImage)
     }
     var sites = [Site]()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var managedContext:NSManagedObjectContext!
+    var image = UIImage()
+    var saveImage : Data!
+    var nextImage : Data!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +47,42 @@ class CreateSiteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
+        nextImage = firstImage!.jpegData(compressionQuality: 1.0)!
         loadCoreData()
+        
+        
        
     }
-    func appendSite(title:String, latitude: Double, longitude: Double){
-        print("append side")
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let possibleImage = info[.editedImage] as? UIImage{
+           
+            saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
+            print(saveImage)
+        }
+        else if let possibleImage = info[.originalImage] as? UIImage {
+           
+            saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
+            print(saveImage)
+        }
+        else{
+            return
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    func appendSite(title:String, latitude: Double, longitude: Double, image:Data){
+       
         let site = Site(context: managedContext)
         site.title = title
+
         site.latitude = Double(latitude)
         site.longitude = Double(longitude)
+        site.image = image
+//        site.sayo = "Hello"
         sites.append(site)
+       
+        
 
         
     }
@@ -51,28 +91,37 @@ class CreateSiteViewController: UIViewController {
         for site in sites{
             
             let siteEntity = NSEntityDescription.insertNewObject(forEntityName: "Site", into: managedContext)
+            
             siteEntity.setValue(site.title, forKey: "title")
+            siteEntity.setValue(site.image, forKey: "image")
             siteEntity.setValue(site.latitude, forKey: "latitude")
             siteEntity.setValue(site.longitude, forKey: "longitude")
-     
+           
             
         }
         appDelegate.saveContext()
     }
     func loadCoreData(){
-        print("here")
-        sites = [Site]()
+        
+        
+       
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Site")
         do{
             let results = try managedContext.fetch(fetchRequest)
             if results is [NSManagedObject]{
-                print(results)
+                
                 for result in (results as! [NSManagedObject]){
+                    
                     let title = result.value(forKey: "title") as! String
                     let latitude = result.value(forKey: "latitude") as! Double
                     let longitude = result.value(forKey: "longitude") as! Double
-                   appendSite(title: title, latitude: latitude, longitude: longitude)
-                    print(sites)
+                    
+                    let image = result.value(forKey: "image") as! Data
+                   
+                   
+                    appendSite(title: title, latitude: latitude, longitude: longitude,image:image)
+                   
+
                 }
             }
         } catch{
