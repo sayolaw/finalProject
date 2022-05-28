@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DAD1DDD28428C7700C0E51E /* Site.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD1DDB28428C7700C0E51E /* Site.xcdatamodeld */; };
 		0DF51DA1283F1FC100477FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DA0283F1FC100477FE7 /* AppDelegate.swift */; };
 		0DF51DA3283F1FC100477FE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DA2283F1FC100477FE7 /* SceneDelegate.swift */; };
 		0DF51DA5283F1FC100477FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF51DA4283F1FC100477FE7 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DAD1DDC28428C7700C0E51E /* Site.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Site.xcdatamodel; sourceTree = "<group>"; };
 		0DF51D9D283F1FC100477FE7 /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF51DA0283F1FC100477FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DF51DA2283F1FC100477FE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				0DF51DBE28404B0D00477FE7 /* Cell.swift */,
 				0DF51DC02840580E00477FE7 /* MapViewController.swift */,
 				0DF51DC228405CC000477FE7 /* CreateSiteViewController.swift */,
+				0DAD1DDB28428C7700C0E51E /* Site.xcdatamodeld */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DAD1DDD28428C7700C0E51E /* Site.xcdatamodeld in Sources */,
 				0DF51DA5283F1FC100477FE7 /* ViewController.swift in Sources */,
 				0DF51DB928403A2D00477FE7 /* SiteCollectionViewController.swift in Sources */,
 				0DF51DBF28404B0D00477FE7 /* Cell.swift in Sources */,
@@ -386,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0DAD1DDB28428C7700C0E51E /* Site.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0DAD1DDC28428C7700C0E51E /* Site.xcdatamodel */,
+			);
+			currentVersion = 0DAD1DDC28428C7700C0E51E /* Site.xcdatamodel */;
+			path = Site.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DF51D95283F1FC100477FE7 /* Project object */;
 }

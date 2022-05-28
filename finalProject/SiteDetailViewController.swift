@@ -14,7 +14,7 @@ class SiteDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         siteTitle.text = site?.title
-        firstImage.image = UIImage(named: site?.image ?? "")
+//        firstImage.image = UIImage(named: site?.image ?? "")
         // Do any additional setup after loading the view.
     }
     

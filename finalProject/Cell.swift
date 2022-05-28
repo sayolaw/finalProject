@@ -6,16 +6,18 @@
 //
 
 import Foundation
-struct Site{
-    var image:String = ""
+
+var sites:[Site]?
+struct SiteM{
     var title:String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
   
-    init(image: String, name: String, latitude: Double, longitude: Double){
-        self.image = image
-        self.title = name
+    init(title: String, latitude: Double, longitude: Double){
+        
+        self.title = title
         self.latitude = latitude
         self.longitude = longitude
     }
 }
+
