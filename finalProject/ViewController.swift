@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         site.longitude = Double(longitude)
 
         site.image = image[0]
-//        site.image1 = image[1]
-//        site.image2 = image[2]
+        site.image1 = image[1]
+        site.image2 = image[2]
         sites.append(site)
 
 
@@ -81,9 +81,9 @@ class ViewController: UIViewController {
                     let longitude = result.value(forKey: "longitude") as! Double
                     print("view controller \(title)")
                     let image = result.value(forKey: "image") as! Data
-//                    let image1 = result.value(forKey: "image1") as! Data
-//                    let image2 = result.value(forKey: "image2") as! Data
-                    let imageCollection = [image]
+                    let image1 = result.value(forKey: "image1") as! Data
+                    let image2 = result.value(forKey: "image2") as! Data
+                    let imageCollection = [image,image1,image2]
 
 
                     appendSite(title: title, latitude: latitude, longitude: longitude,image:imageCollection)

@@ -52,6 +52,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
+
 //        loadCoreData()
         
         
@@ -87,8 +88,8 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         site.longitude = Double(longitude)
 
         site.image = image[0]
-//        site.image1 = image[1]
-//        site.image2 = image[2]
+        site.image1 = image[1]
+        site.image2 = image[2]
 //        site.sayo = "Hello"
         sites.append(site)
         
@@ -106,8 +107,8 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
             
             siteEntity.setValue(site.title, forKey: "title")
             siteEntity.setValue(site.image, forKey: "image")
-//            siteEntity.setValue(site.image1, forKey: "image1")
-//            siteEntity.setValue(site.image2, forKey: "image2")
+            siteEntity.setValue(site.image1, forKey: "image1")
+            siteEntity.setValue(site.image2, forKey: "image2")
             siteEntity.setValue(site.latitude, forKey: "latitude")
             siteEntity.setValue(site.longitude, forKey: "longitude")
             
@@ -136,9 +137,9 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
                     let longitude = result.value(forKey: "longitude") as! Double
                     
                     let image = result.value(forKey: "image") as! Data
-//                    let image1 = result.value(forKey: "image1") as! Data
-//                    let image2 = result.value(forKey: "image2") as! Data
-                    let imageCollection = [image]
+                    let image1 = result.value(forKey: "image1") as! Data
+                    let image2 = result.value(forKey: "image2") as! Data
+                    let imageCollection = [image,image1,image2]
                    print(title)
                   
                     appendSite(title: title, latitude: latitude, longitude: longitude,image:imageCollection)
