@@ -13,34 +13,36 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var latitudeInput: UITextField!
     @IBOutlet weak var longitudeInpute: UITextField!
-    var firstImage = UIImage(named:"Aydin")
+    
     var imageArr = [Data]()
     var count = 0
+    var sites = [Site]()
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var managedContext:NSManagedObjectContext!
+    var image = UIImage()
+    var saveImage : Data!
+    var nextImage : Data!
     
 
     @IBAction func picture(_ sender: Any) {
         count+=1
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
-        vc.allowsEditing = true
+        vc.allowsEditing = false
         vc.delegate = self
         present(vc, animated: true)
     }
     
     
     @IBAction func saveNewSite(_ sender: Any) {
-        print("buttonside")
+       
         let titleInput = titleInput.text ?? "No title"
         let latitudeInput = Double(latitudeInput.text ?? "0.0") ?? 0.0
         let longitudeInput = Double(longitudeInpute.text ?? "0.0") ?? 0.0
         appendSite(title: titleInput, latitude: latitudeInput, longitude: longitudeInput,image: imageArr)
     }
-    var sites = [Site]()
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var managedContext:NSManagedObjectContext!
-    var image = UIImage()
-    var saveImage : Data!
-    var nextImage : Data!
+
   
     
     override func viewDidLoad() {
@@ -50,8 +52,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
-        nextImage = firstImage!.jpegData(compressionQuality: 1.0)!
-        loadCoreData()
+//        loadCoreData()
         
         
        
@@ -60,7 +61,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         if let possibleImage = info[.editedImage] as? UIImage{
            
             saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
-            print(saveImage)
+            
             imageArr.append(saveImage)
             
         }
@@ -77,7 +78,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true)
     }
     
-    func appendSite(title:String, latitude: Double, longitude: Double, image:[Data]){
+    private func appendSite(title:String, latitude: Double, longitude: Double, image:[Data]){
        
         let site = Site(context: managedContext)
         site.title = title
@@ -86,11 +87,12 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         site.longitude = Double(longitude)
 
         site.image = image[0]
-        site.image1 = image[1]
-        site.image2 = image[2]
+//        site.image1 = image[1]
+//        site.image2 = image[2]
 //        site.sayo = "Hello"
         sites.append(site)
         
+    
       
         
 
@@ -104,8 +106,8 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
             
             siteEntity.setValue(site.title, forKey: "title")
             siteEntity.setValue(site.image, forKey: "image")
-            siteEntity.setValue(site.image1, forKey: "image1")
-            siteEntity.setValue(site.image2, forKey: "image2")
+//            siteEntity.setValue(site.image1, forKey: "image1")
+//            siteEntity.setValue(site.image2, forKey: "image2")
             siteEntity.setValue(site.latitude, forKey: "latitude")
             siteEntity.setValue(site.longitude, forKey: "longitude")
             
@@ -119,26 +121,30 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         
        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Site")
+       
         do{
             let results = try managedContext.fetch(fetchRequest)
+            
             if results is [NSManagedObject]{
-                
+         
+               
                 for result in (results as! [NSManagedObject]){
                     
                     let title = result.value(forKey: "title") as! String
+                  
                     let latitude = result.value(forKey: "latitude") as! Double
                     let longitude = result.value(forKey: "longitude") as! Double
                     
                     let image = result.value(forKey: "image") as! Data
-                    let image1 = result.value(forKey: "image1") as! Data
-                    let image2 = result.value(forKey: "image2") as! Data
-                    let imageCollection = [image,image1,image2]
-                   
+//                    let image1 = result.value(forKey: "image1") as! Data
+//                    let image2 = result.value(forKey: "image2") as! Data
+                    let imageCollection = [image]
+                   print(title)
                   
                     appendSite(title: title, latitude: latitude, longitude: longitude,image:imageCollection)
                    
-
                 }
+                
             }
         } catch{
             print(error)
@@ -158,10 +164,11 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(sites)
         if segue.identifier == "showCollection" {
           
- 
-//            print("this is the \(site.name)")
+            
+
                 let destinationController = segue.destination as! SiteCollectionViewController
            
             destinationController.sites = self.sites
@@ -169,6 +176,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
             }
         
     }
+
     /*
     // MARK: - Navigation
 

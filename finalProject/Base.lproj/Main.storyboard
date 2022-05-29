@@ -31,7 +31,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create/Add a site"/>
                                         <connections>
-                                            <segue destination="xLg-LT-aKU" kind="show" id="6Tz-6a-fdQ"/>
+                                            <segue destination="xLg-LT-aKU" kind="show" identifier="createSite" id="6Tz-6a-fdQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-df-oUl">
@@ -39,7 +39,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="View Sites"/>
                                         <connections>
-                                            <segue destination="VxA-X4-c6l" kind="show" id="nvK-e0-lyq"/>
+                                            <segue destination="VxA-X4-c6l" kind="show" identifier="viewSites" id="nvK-e0-lyq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -395,7 +395,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dGF-tw-WiQ"/>
+        <segue reference="nvK-e0-lyq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>

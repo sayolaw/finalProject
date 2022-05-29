@@ -102,7 +102,9 @@ class SiteCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        
         return sites.count
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -130,12 +132,13 @@ class SiteCollectionViewController: UICollectionViewController {
 //                collectionView.deselectItem(at: indexPaths[0], animated: true)
             }
         }
+
     }
 //    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //            performSegue(withIdentifier: "showDetail", sender: nil)
 //        }
     @IBAction func unwindToMain(segue: UIStoryboardSegue){
-           
+           print("left")
        }
     // MARK: UICollectionViewDelegate
 
