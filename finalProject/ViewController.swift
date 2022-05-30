@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         // Do any additional setup after loading the view.
     
         
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         vmanagedContext = vappDelegate.persistentContainer.viewContext
+      
         loadCoreData()
         
       
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         
     }
  
-    func appendSite(title:String, latitude: Double, longitude: Double, image:[Data]){
+    func appendSite(title:String, latitude: Double, longitude: Double,image:[Data]){
 
         let site = Site(context: vmanagedContext)
         site.title = title
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
                     let imageCollection = [image,image1,image2]
 
 
-                    appendSite(title: title, latitude: latitude, longitude: longitude,image:imageCollection)
+                    appendSite(title: title, latitude: latitude, longitude: longitude, image: imageCollection)
 
 
                 }
