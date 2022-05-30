@@ -30,12 +30,13 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
     
 
     @IBAction func picture(_ sender: Any) {
+        if(count<3){
         count+=1
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.allowsEditing = false
         vc.delegate = self
-        present(vc, animated: true)
+            present(vc, animated: true)}
     }
     
     @IBOutlet weak var location: UISwitch!
