@@ -7,16 +7,22 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     let vappDelegate = UIApplication.shared.delegate as! AppDelegate
     var vmanagedContext:NSManagedObjectContext!
+    var locationManager = CLLocationManager()
     var sites = [Site]()
-    
+    var lat = CLLocationDegrees()
+    var lng = CLLocationDegrees()
     override func viewDidLoad() {
         super.viewDidLoad()
-//       clearCoreData()
-//        vappDelegate.saveContext()
+        locationManager.delegate = self
+//        mapView.isZoomEnabled = false
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     
         
@@ -29,6 +35,12 @@ class ViewController: UIViewController {
         
       
         
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        lat = location?.coordinate.latitude ?? 0.0
+        lng = location?.coordinate.longitude ?? 0.0
         
     }
  
@@ -120,11 +132,14 @@ class ViewController: UIViewController {
                 let destinationController = segue.destination as! SiteCollectionViewController
            
             destinationController.sites = self.sites
+          
 //                collectionView.deselectItem(at: indexPaths[0], animated: true)
             }
         else if segue.identifier == "createSite"{
             let destinationController = segue.destination as! CreateSiteViewController
             destinationController.sites = sites
+            destinationController.lat = self.lat
+            destinationController.lng = self.lng
             
         }
         

@@ -68,11 +68,8 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
         
-        locationManager.delegate = self
-//        mapView.isZoomEnabled = false
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+
+       
 
 //        loadCoreData()
         
@@ -129,6 +126,8 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
 
     @objc func saveCoreData(){
      clearCoreData()
+        print("Hello these are the sites")
+        print(sites)
         for site in sites{
             
             let siteEntity = NSEntityDescription.insertNewObject(forEntityName: "Site", into: managedContext)
