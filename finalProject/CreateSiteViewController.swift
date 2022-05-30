@@ -41,7 +41,9 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         let latitudeInput = Double(latitudeInput.text ?? "0.0") ?? 0.0
         let longitudeInput = Double(longitudeInpute.text ?? "0.0") ?? 0.0
         appendSite(title: titleInput, latitude: latitudeInput, longitude: longitudeInput,image: imageArr)
-        
+        let alert = UIAlertController(title: "Site Added", message: "Site Added", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
   
