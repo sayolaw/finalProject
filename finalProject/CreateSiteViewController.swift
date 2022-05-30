@@ -38,7 +38,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         vc.allowsEditing = false
         vc.delegate = self
             present(vc, animated: true)
-            picCheck.text = "\(count) pics added"
+            
         }
     }
     
@@ -93,12 +93,14 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
             saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
             
             imageArr.append(saveImage)
+            picCheck.text = "\(count) pics added"
             
         }
         else if let possibleImage = info[.originalImage] as? UIImage {
            
             saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
             imageArr.append(saveImage)
+            picCheck.text = "\(count) pics added"
             
         }
         else{
