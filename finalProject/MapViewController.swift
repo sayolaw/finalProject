@@ -34,7 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let latitude: CLLocationDegrees = site!.latitude
         let longitude: CLLocationDegrees = site!.longitude
         // Do any additional setup after loading the view.
-        displayLocation(latitude: latitude, longitude: longitude, title: "Site Location", subtitle: "The site is here")
+        displayLocation(latitude: latitude, longitude: longitude, title: site!.title!, subtitle: "The site is here")
     }
     
     func displayLocation(latitude: CLLocationDegrees,
