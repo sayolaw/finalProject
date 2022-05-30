@@ -72,14 +72,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
-        
-
-       
-
-//        loadCoreData()
-        
-        
-       
+    
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
@@ -123,7 +116,6 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         site.image = image[0]
         site.image1 = image[1]
         site.image2 = image[2]
-//        site.sayo = "Hello"
         sites.append(site)
         
     
@@ -135,8 +127,6 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
 
     @objc func saveCoreData(){
      clearCoreData()
-        print("Hello these are the sites")
-        print(sites)
         for site in sites{
             
             let siteEntity = NSEntityDescription.insertNewObject(forEntityName: "Site", into: managedContext)
