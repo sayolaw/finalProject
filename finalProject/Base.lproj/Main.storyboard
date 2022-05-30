@@ -46,7 +46,8 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="secondarySystemFillColor"/>
                         <constraints>
                             <constraint firstItem="buK-l9-Hzd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ry-CZ-ZAO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="13s-YS-V2j" secondAttribute="trailing" constant="30" id="AYm-LU-fhc"/>
@@ -399,6 +400,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

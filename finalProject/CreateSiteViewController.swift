@@ -99,6 +99,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
 
         
     }
+
     @objc func saveCoreData(){
      clearCoreData()
         for site in sites{
