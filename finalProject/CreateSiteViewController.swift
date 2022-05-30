@@ -7,17 +7,21 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate,MKMapViewDelegate,CLLocationManagerDelegate {
    
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var latitudeInput: UITextField!
     @IBOutlet weak var longitudeInpute: UITextField!
     
+    var lat = CLLocationDegrees()
+    var lng = CLLocationDegrees()
     var imageArr = [Data]()
     var count = 0
     var sites = [Site]()
-    
+    var locationManager = CLLocationManager()
+
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var managedContext:NSManagedObjectContext!
     var image = UIImage()
@@ -34,13 +38,21 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         present(vc, animated: true)
     }
     
+    @IBOutlet weak var location: UISwitch!
     
     @IBAction func saveNewSite(_ sender: Any) {
-       
+        var latD:Double
+        var lngD:Double
         let titleInput = titleInput.text ?? "No title"
-        let latitudeInput = Double(latitudeInput.text ?? "0.0") ?? 0.0
-        let longitudeInput = Double(longitudeInpute.text ?? "0.0") ?? 0.0
-        appendSite(title: titleInput, latitude: latitudeInput, longitude: longitudeInput,image: imageArr)
+        if(location.isOn){
+            latD = lat
+            lngD = lng
+        }
+        else{
+            latD = Double(latitudeInput.text ?? "0.0") ?? 0.0
+            lngD = Double(longitudeInpute.text ?? "0.0") ?? 0.0
+        }
+        appendSite(title: titleInput, latitude: latD, longitude: lngD,image: imageArr)
         let alert = UIAlertController(title: "Site Added", message: "Site Added", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -55,11 +67,23 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(saveCoreData), name: UIApplication.willResignActiveNotification, object: nil)
         managedContext = appDelegate.persistentContainer.viewContext
+        
+        locationManager.delegate = self
+//        mapView.isZoomEnabled = false
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
 
 //        loadCoreData()
         
         
        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        lat = location?.coordinate.latitude ?? 0.0
+        lng = location?.coordinate.longitude ?? 0.0
+        
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let possibleImage = info[.editedImage] as? UIImage{

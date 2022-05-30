@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+//       clearCoreData()
+//        vappDelegate.saveContext()
         // Do any additional setup after loading the view.
     
         
