@@ -8,6 +8,7 @@
 import Foundation
 
 var sites:[Site]?
+
 struct SiteM{
     var title:String = ""
     var latitude: Double = 0.0
