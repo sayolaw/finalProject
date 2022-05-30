@@ -31,7 +31,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
 
     @IBAction func picture(_ sender: Any) {
         if(count<3){
-        count+=1
+        
             
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -93,6 +93,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
             saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
             
             imageArr.append(saveImage)
+            count+=1
             picCheck.text = "\(count) pics added"
             
         }
@@ -100,6 +101,7 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
            
             saveImage = possibleImage.jpegData(compressionQuality: 1.0)!
             imageArr.append(saveImage)
+            count+=1
             picCheck.text = "\(count) pics added"
             
         }
