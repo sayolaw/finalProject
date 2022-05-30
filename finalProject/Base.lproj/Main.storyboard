@@ -157,10 +157,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-N0-pR8">
-                                        <rect key="frame" x="152" y="351" width="50.5" height="31"/>
+                                        <rect key="frame" x="98.5" y="351" width="157" height="31"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 pics added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-ua-nbW">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-Se-rsC">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
+                                                <rect key="frame" x="106.5" y="0.0" width="50.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
                                                 <connections>
@@ -205,6 +211,7 @@
                         <outlet property="latitudeInput" destination="PxC-6a-TV5" id="jEg-6x-WsQ"/>
                         <outlet property="location" destination="xpy-AD-u3K" id="fce-mC-Xif"/>
                         <outlet property="longitudeInpute" destination="FUh-Rk-zpG" id="sEO-2t-p3h"/>
+                        <outlet property="picCheck" destination="MVb-ua-nbW" id="5uP-Yz-vJO"/>
                         <outlet property="titleInput" destination="Sfs-ty-G4z" id="Nyj-Hj-MLC"/>
                     </connections>
                 </viewController>

@@ -32,15 +32,19 @@ class CreateSiteViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func picture(_ sender: Any) {
         if(count<3){
         count+=1
+            
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.allowsEditing = false
         vc.delegate = self
-            present(vc, animated: true)}
+            present(vc, animated: true)
+            picCheck.text = "\(count) pics added"
+        }
     }
     
     @IBOutlet weak var location: UISwitch!
     
+    @IBOutlet weak var picCheck: UILabel!
     @IBAction func saveNewSite(_ sender: Any) {
         var latD:Double
         var lngD:Double
