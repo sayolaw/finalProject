@@ -143,9 +143,9 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IF-gJ-djH">
-                                        <rect key="frame" x="143.5" y="318.5" width="67" height="31"/>
+                                        <rect key="frame" x="135" y="318.5" width="84" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                        <buttonConfiguration key="configuration" style="filled" title="Save Site">
                                             <color key="baseBackgroundColor" red="0.21463441950000001" green="0.76942896839999997" blue="0.27651632679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -153,9 +153,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bet-rW-syZ">
-                                        <rect key="frame" x="138" y="398.5" width="78.5" height="31"/>
+                                        <rect key="frame" x="131.5" y="398.5" width="91" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add Site"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="View Sites"/>
                                         <connections>
                                             <segue destination="VxA-X4-c6l" kind="show" identifier="showCollection" id="dGF-tw-WiQ"/>
                                         </connections>
@@ -401,7 +401,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nvK-e0-lyq"/>
+        <segue reference="dGF-tw-WiQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
