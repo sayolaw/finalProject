@@ -161,7 +161,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-N0-pR8">
-                                        <rect key="frame" x="93.5" y="478.5" width="167.5" height="31"/>
+                                        <rect key="frame" x="152" y="478.5" width="50.5" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-Se-rsC">
                                                 <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
@@ -170,16 +170,6 @@
                                                 <connections>
                                                     <action selector="picture:" destination="xLg-LT-aKU" eventType="touchUpInside" id="GBN-cd-eQV"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-Yw-rpO">
-                                                <rect key="frame" x="58.5" y="0.0" width="50.5" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-20-pfd">
-                                                <rect key="frame" x="117" y="0.0" width="50.5" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="camera" catalog="system"/>
                                             </button>
                                         </subviews>
                                     </stackView>
